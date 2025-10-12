@@ -1,17 +1,6 @@
 {
-  "version": 2,
-  "routes": [
-    {
-      "src": "/.well-known/apple-app-site-association",
-      "dest": "/public/.well-known/apple-app-site-association"
-    },
-    {
-      "src": "/.well-known/assetlinks.json", 
-      "dest": "/public/.well-known/assetlinks.json"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/public/index.html"
-    }
-  ]
+  "rewrites": [
+    { "source": "/l/:id", "destination": "/api/l/:id" }
+  ],
+  "cleanUrls": true
 }

@@ -1,9 +1,12 @@
 {
   "name": "elmadrasa-link",
   "version": "1.0.0",
-  "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "serve public",
-    "build": "echo 'No build step required'"
+    "dev": "vercel dev",
+    "start": "vercel start"
+  },
+  "dependencies": {
+    "nanoid": "^5.0.1"
   }
 }

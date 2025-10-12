@@ -1,0 +1,9 @@
+{
+  "name": "elmadrasa-link",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "serve public",
+    "build": "echo 'No build step required'"
+  }
+}

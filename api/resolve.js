@@ -9,10 +9,10 @@ export default function handler(req, res) {
   let fallback = "";
 
   if (type === "homework") {
-    deepLink = `elmadrasa://homework/${id}`;
+    deepLink = `elmadrasaapp//homework/${id}`;
     fallback = `https://elmadrasa.app/homework/${id}`;
   } else if (type === "exam") {
-    deepLink = `elmadrasa://exam/${id}`;
+    deepLink = `elmadrasaapp//exam/${id}`;
     fallback = `https://elmadrasa.app/exam/${id}`;
   } else {
     return res.status(404).json({ error: "Unknown link type" });

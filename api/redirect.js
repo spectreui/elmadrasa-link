@@ -1,6 +1,6 @@
 export default async function handler(req, res) {
   const path = req.url.replace(/^\/api\/redirect/, ""); // Get everything after /api/redirect
-  const deeplink = `elmadrasa://${path}`; // Convert to your app's scheme
+  const deeplink = `elmadrasaapp//${path}`; // Convert to your app's scheme
 
   // iOS Universal Link behavior: redirect to deep link
   // Android App Link fallback: same

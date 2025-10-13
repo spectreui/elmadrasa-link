@@ -1,5 +1,50 @@
 {
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/api/redirect" }
+  "version": 2,
+  "builds": [
+    {
+      "src": "public/**/*",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/deep-link",
+      "dest": "/public/deep-link.html"
+    },
+    {
+      "src": "/deeplink",
+      "dest": "/public/deep-link.html"
+    },
+    {
+      "src": "/",
+      "dest": "/public/deep-link.html"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "status": 404,
+      "dest": "/public/deep-link.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        }
+      ]
+    }
   ]
 }

@@ -1,12 +1,14 @@
 {
-  "name": "elmadrasa-link",
+  "name": "elmadrasa-deeplink",
   "version": "1.0.0",
-  "type": "module",
+  "description": "El Madrasa Deep Link Landing Page",
+  "private": true,
   "scripts": {
     "dev": "vercel dev",
-    "start": "vercel start"
+    "build": "echo 'No build step required'",
+    "start": "vercel dev"
   },
-  "dependencies": {
-    "nanoid": "^5.0.1"
+  "devDependencies": {
+    "vercel": "^32.0.0"
   }
 }

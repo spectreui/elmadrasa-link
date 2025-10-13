@@ -6,26 +6,18 @@
       "use": "@vercel/static"
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/deep-link",
-      "dest": "/public/deep-link.html"
+      "source": "/deep-link",
+      "destination": "/public/deep-link.html"
     },
     {
-      "src": "/deeplink",
-      "dest": "/public/deep-link.html"
+      "source": "/deeplink",
+      "destination": "/public/deep-link.html"
     },
     {
-      "src": "/",
-      "dest": "/public/deep-link.html"
-    },
-    {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/(.*)",
-      "status": 404,
-      "dest": "/public/deep-link.html"
+      "source": "/",
+      "destination": "/public/deep-link.html"
     }
   ],
   "headers": [
